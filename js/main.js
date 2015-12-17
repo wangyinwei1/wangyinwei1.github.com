@@ -353,6 +353,10 @@ function toDou(iNum){
 	var oW = document.getElementById('wall');
 	var aLi = oW.getElementsByTagName('li');
 	var oBp = document.getElementById('page');
+	var oWorkTit = document.getElementById('work_title');
+	oWorkTit.onclick=function(){
+		addCookie('deg',0,1);
+	};
 	for(var i=0;i<aLi.length;i++){
 		throughWall(aLi[i]);
 		(function(index){
