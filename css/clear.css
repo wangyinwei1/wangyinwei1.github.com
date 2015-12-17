@@ -1,0 +1,105 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	background:#333030;
+	overflow:hidden;
+}
+.clear_ct{
+	width:540px;
+	font-size:30px;
+	font-weight: blod;
+	color:#000;
+	position:absolute;
+	left:50%;
+	margin-left:-270px;
+	top:450px;	
+	height:60px;
+	border-radius:20px;
+	background:#333030;
+	z-index: 11;
+	box-shadow:inset 0px 3px 20px #0e0e0e;
+}
+.over_hid{
+	height:60px;
+	width:540px;
+	overflow:hidden;
+}
+.clear_ct span{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	text-align: center;
+	line-height:60px;
+	font-weight:bold;
+	font-family:'宋体';
+}
+.c1{
+	position:absolute;
+	left:0;
+	top:0;
+	z-index: 10;
+}
+.pen{
+	background:url(../img/pen.png) no-repeat;
+	width:40px;
+	height:40px;
+	background-size:100%;
+	position:absolute;
+	z-index: 12;
+}
+.clear_ct .clear_btn{
+	width:100px;
+	height:100%;
+	background:#fff;
+	position:absolute;
+	left:-50px;
+	top:0;
+	border-radius:20px;
+	box-shadow:inset 0px 3px 20px #adadad,0px 0px 10px #0e0e0e;
+	cursor:pointer;
+	z-index: 20;
+}
+@-webkit-keyframes test
+{
+	from {background-position:-60px;}
+	to {background-position:550px 0;}
+}
+@-moz-keyframes test
+{
+	from {background-position:-60px;}
+	to {background-position:550px 0;}
+}
+@-ms-keyframes test
+{
+	from {background-position:-60px;}
+	to {background-position:550px 0;}
+}
+@keyframes test
+{
+	from {background-position:-60px;}
+	to {background-position:450px 0;}
+}
+.clear_mask{
+	background:-webkit-linear-gradient(-30deg,rgba(255,255,255,0) 35px,rgba(255,255,255,1) 65px,rgba(255,255,255,0) 85px) ;
+	background:-moz-linear-gradient(-30deg,rgba(255,255,255,0) 35px,rgba(255,255,255,1) 65px,rgba(255,255,255,0) 85px) ;
+	background-position:-60px;
+	-webkit-animation:5s test linear; 
+	-moz-animation:5s test linear; 
+	-ms-animation:5s test linear; 
+	animation:5s test linear; 
+	-webkit-animation-iteration-count:infinite;
+	-moz-animation-iteration-count:infinite;
+	-ms-animation-iteration-count:infinite;
+	animation-iteration-count:infinite; 
+  	background-repeat:no-repeat;
+	-webkit-background-clip:text;
+	-moz-background-clip:text;
+	-ms-background-clip:text;
+	background-clip:text;
+	color:rgba(0,0,0,0);
+	overflow: hidden;
+}
