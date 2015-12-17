@@ -71,7 +71,7 @@ body{
     text-align:center;
     margin:0 auto;
     display: block;
-    padding-top:160px;
+    padding-top:130px;
 }
 .want{
 	padding-top:30px;
@@ -83,6 +83,18 @@ body{
 	display: block;
 	line-height: 32px;
 	font-weight: normal;
+}
+.resume{
+	text-align: center;
+	line-height:30px;
+	width:80px;
+	height:30px;
+	font-size: 16px;
+	color:rgba(255,255,255,0.9);
+	border:1px dashed rgba(255,255,255,0.9);
+	display: block;
+	font-weight: normal;
+	margin:20px auto 0;
 }
 .my_person{
 	height:700px;
