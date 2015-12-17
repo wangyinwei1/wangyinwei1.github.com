@@ -85,23 +85,23 @@ document.onmousedown=function(){
 		var scale = t/tMax;
 		oSh.style.top=-scale*(oSh.scrollHeight-oSc.offsetHeight)+'px';
 	}
-	addWheel(document,function(dir){
-		var t = oBar.offsetTop;
-		if(dir){
-			t+=10;	
-			if(bOk){
-				clearInterval(timer);
-			}
-			bOk = true;
-		}else{
-			t-=10;
-			if(bOk){
-				clearInterval(timer);
-			}
-			bOk = true;
-		}
-		changeT(t);
-	});
+	// addWheel(document,function(dir){
+	// 	var t = oBar.offsetTop;
+	// 	if(dir){
+	// 		t+=10;	
+	// 		if(bOk){
+	// 			clearInterval(timer);
+	// 		}
+	// 		bOk = true;
+	// 	}else{
+	// 		t-=10;
+	// 		if(bOk){
+	// 			clearInterval(timer);
+	// 		}
+	// 		bOk = true;
+	// 	}
+	// 	changeT(t);
+	// });
 })();
 
 //导航运动
@@ -193,21 +193,21 @@ function toDou(iNum){
 		oPage.style.WebkitTransform=oPage.style.MozTransform=oPage.style.transform='perspective(1500px) translateZ(-100px) translateX(500px) translateY(-20px) rotateY(-20deg) rotateX(58deg) rotateZ(60deg) scale(0.5,0.5)';
 		function fnEnd(){
 			oPage.removeEventListener('transitionend',fnEnd,false);
-			clearTimeout(oPage.timer);
-			 oPage.timer = setTimeout(function(){
+			clearTimeout(timer);
+			timer = setTimeout(function(){
 				oPage.style.WebkitTransform=oPage.style.MozTransform=oPage.style.transform='perspective(1500px) translateZ(0px) translateX(0px) translateY(0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scale(1,1)';
 			},300);
 			
 		}
 		oPage.addEventListener('transitionend',fnEnd,false);
-		// function fnEnd(){
-		// 	oPage.removeEventListener('transitionend',fnEnd,false);
-		// 	alert('不错哦,这都可以发现');
-		// 	oPerson_ct.style.WebkitTransformOrigin=oPerson_ct.style.transformOrigin='center 650px';
-		// 	oPerson_ct.style.WebkitTransform=oPerson_ct.style.transform='rotateX(-60deg)';
-		// 	oPerson_ct.style.WebkitTransition=oPerson_ct.style.transition='1s all ease';
-		// };
-		// oPage.addEventListener('transitionend',fnEnd,false);
+	// 	// function fnEnd(){
+	// 	// 	oPage.removeEventListener('transitionend',fnEnd,false);
+	// 	// 	alert('不错哦,这都可以发现');
+	// 	// 	oPerson_ct.style.WebkitTransformOrigin=oPerson_ct.style.transformOrigin='center 650px';
+	// 	// 	oPerson_ct.style.WebkitTransform=oPerson_ct.style.transform='rotateX(-60deg)';
+	// 	// 	oPerson_ct.style.WebkitTransition=oPerson_ct.style.transition='1s all ease';
+	// 	// };
+	// 	// oPage.addEventListener('transitionend',fnEnd,false);
 	};
 	
 	
@@ -352,21 +352,21 @@ function toDou(iNum){
 (function(){
 	var oW = document.getElementById('wall');
 	var aLi = oW.getElementsByTagName('li');
-	var oPage = document.getElementById('page');
+	var oBp = document.getElementById('page');
 	for(var i=0;i<aLi.length;i++){
 		throughWall(aLi[i]);
 		(function(index){
 			aLi[index].onclick=function(){
 				if(index==5){
-					oPage.style.WebkitTransform=oPage.style.MozTransform=oPage.style.transform='perspective(1500px) translateZ(-100px) translateX(500px) translateY(-20px) rotateY(-20deg) rotateX(58deg) rotateZ(60deg) scale(0.5,0.5)';
+					oBp.style.WebkitTransform=oBp.style.MozTransform=oBp.style.transform='perspective(1500px) translateZ(-100px) translateX(500px) translateY(-20px) rotateY(-20deg) rotateX(58deg) rotateZ(60deg) scale(0.5,0.5)';
 				}
 
 				function fnEnd(){
-					oPage.removeEventListener('transitionend',fnEnd,false);
+					oBp.removeEventListener('transitionend',fnEnd,false);
 					alert('暂时还没有更多，敬请期待');
-					oPage.style.WebkitTransform=oPage.style.MozTransform=oPage.style.transform='perspective(1500px) translateZ(0px) translateX(0px) translateY(0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scale(1,1)';
+					oBp.style.WebkitTransform=oBp.style.MozTransform=oBp.style.transform='perspective(1500px) translateZ(0px) translateX(0px) translateY(0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scale(1,1)';
 				}
-				oPage.addEventListener('transitionend',fnEnd,false);
+				oBp.addEventListener('transitionend',fnEnd,false);
 				switch(index){
 					case 0:
 					addCookie('deg',0,1);
