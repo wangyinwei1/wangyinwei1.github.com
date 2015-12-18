@@ -367,7 +367,6 @@ function toDou(iNum){
 
 				function fnEnd(){
 					oBp.removeEventListener('transitionend',fnEnd,false);
-					alert('暂时还没有更多，敬请期待');
 					oBp.style.WebkitTransform=oBp.style.MozTransform=oBp.style.transform='perspective(1500px) translateZ(0px) translateX(0px) translateY(0px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scale(1,1)';
 				}
 				oBp.addEventListener('transitionend',fnEnd,false);
